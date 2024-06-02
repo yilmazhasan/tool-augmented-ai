@@ -1,6 +1,9 @@
 site_name: Tool Augmented AI
 nav:
   - Home: index.md
+  - Turn: turn.md
+  - Function Call: function-call.md
+  - Adversarial User Cases: adversarial-user-cases.md
   - About: about.md
 
 theme: readthedocs
