@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>About - Tool Augmented AI</title>
+    <title>Function Call - Tool Augmented AI</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "About";
-        var mkdocs_page_input_path = "about.md";
+        var mkdocs_page_name = "Function Call";
+        var mkdocs_page_input_path = "function-call.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -47,20 +47,26 @@
                 <li class="toctree-l1"><a class="reference internal" href="../turn/">Turn</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../function-call/">Function Call</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Function Call</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-single-function-call">1. Single Function Call</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-multiple-parallel-function-calls">2. Multiple Parallel Function Calls</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-multiple-consecutive-function-calls">3. Multiple Consecutive Function Calls</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-no-function-call">4. No Function Call</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../adversarial-user-cases/">Adversarial User Cases</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">About</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#by-reego-software">By Reego Software</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
                 </li>
               </ul>
       </div>
@@ -77,7 +83,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">About</li>
+      <li class="breadcrumb-item active">Function Call</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -86,15 +92,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="tool-augmented-ai">Tool Augmented AI</h1>
-<h2 id="by-reego-software">By Reego Software</h2>
-<p>Reego is an Information Technology individual company, mainly workng on the contract based projects.</p>
-<p><a href="https://reego.software">Reego Software</a></p>
+                <h1 id="function-call">Function Call</h1>
+<p>A function call is a suggestion call by the model to the system using the LLM by an API to be performed.</p>
+<h2 id="1-single-function-call">1. Single Function Call</h2>
+<p>In a single function call; the user prompts such a query that requires exactly one function call to be performed.</p>
+<blockquote>
+<blockquote>
+<p><em>"What is the weather like in Tokyo?"</em></p>
+</blockquote>
+</blockquote>
+<h2 id="2-multiple-parallel-function-calls">2. Multiple Parallel Function Calls</h2>
+<p>In a multiple parallel function calls; the user prompts such a query that requires more than one function call to be performed.</p>
+<blockquote>
+<blockquote>
+<p><em>"What is the weather like in Tokyo and Paris?"</em></p>
+</blockquote>
+</blockquote>
+<h2 id="3-multiple-consecutive-function-calls">3. Multiple Consecutive Function Calls</h2>
+<p>In a multiple consecutive function calls; the user prompts such a query that requires consecutive function calls to be performed, because the second function call would depend on the first one's return value.</p>
+<blockquote>
+<blockquote>
+<p><em>"Create an appointment for XYZ on day A or B."</em></p>
+<blockquote>
+<p>(First we need to check the availability of XYZ on day A and B to do so.)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="4-no-function-call">4. No Function Call</h2>
+<p>In a no function call; the user prompts such a query that does not require a function call to be performed. The reason might be either because of a not supported actions, or a query that does not require a function call at all.</p>
+<blockquote>
+<blockquote>
+<p><em>"What are the signs of the rain?"</em></p>
+</blockquote>
+</blockquote>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../adversarial-user-cases/" class="btn btn-neutral float-left" title="Adversarial User Cases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../turn/" class="btn btn-neutral float-left" title="Turn"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../adversarial-user-cases/" class="btn btn-neutral float-right" title="Adversarial User Cases">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -117,8 +153,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../adversarial-user-cases/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../turn/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../adversarial-user-cases/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
