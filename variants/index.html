@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Adversarial User Cases - Tool Augmented AI</title>
+    <title>Variants - Tool Augmented AI</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Adversarial User Cases";
-        var mkdocs_page_input_path = "adversarial-user-cases.md";
+        var mkdocs_page_name = "Variants";
+        var mkdocs_page_input_path = "variants.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -71,34 +71,32 @@
                 <li class="toctree-l1"><a class="reference internal" href="../best-practices-for-training-data/">Best Practices for Training Data</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Adversarial User Cases</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-missing-information">1. Missing Information</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-unhappy-user-cases">2. Unhappy user cases</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-user-cancels-request">3. User cancels request</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-user-changes-params">4. User changes params</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-user-asks-params">5. User asks params</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#6-user-rejects-providing-params">6. User rejects providing params</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#7-recover-from-failure">7. Recover from failure</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#8-system-pivoting">8. System pivoting</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../adversarial-user-cases/">Adversarial User Cases</a>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../recommendations-for-improvement/">Recommendations for Improvement</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../variants/">Variants</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Variants</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#to-create-variants">To create variants:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variant-with-system-instructions">Variant with system instructions:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variant-with-persona">Variant with persona:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variant-with-json-schema">Variant with json schema:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variant-with-adversarial-cases">Variant with adversarial cases:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variant-with-noisy-user-prompt">Variant with noisy user prompt:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -123,7 +121,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Adversarial User Cases</li>
+      <li class="breadcrumb-item active">Variants</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -132,58 +130,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="adversarial-user-cases">Adversarial User Cases</h1>
-<p>Not always; the users are happy, the convesations straightforward and perfect, and the functions succeed.</p>
-<h2 id="1-missing-information">1. Missing Information</h2>
-<p>Not always, users provide all the informations at once, there might be some missing and some extra informations. This is basically because of that they don't know what the params are.</p>
-<p>The model might need to ask one by one for the required values.</p>
-<blockquote>
-<blockquote>
-<p><em>I want to have an appointment on day A or day B</em></p>
-<blockquote>
-<p>(<em>The model needs to know for which department, and for which doctor.</em>)</p>
-</blockquote>
-</blockquote>
-</blockquote>
+                <h1 id="variants">Variants</h1>
+<p>From an original task, 4-5 variants might be created.</p>
+<h2 id="to-create-variants">To create variants:</h2>
+<h3 id="variant-with-system-instructions">Variant with system instructions:</h3>
+<p>Update the system instructions to include different kind of behavior e.g. assistant should be concise, assistant should be kind etc</p>
+<h3 id="variant-with-persona">Variant with persona:</h3>
+<p>Users might have different personas e.g. user might not provide all the informations or they might provide all at once</p>
+<h3 id="variant-with-json-schema">Variant with json schema:</h3>
+<p>Update json schema with competing or mixed functions (Say if original includes 3 functions, this might include 5-6 functions)</p>
+<h3 id="variant-with-adversarial-cases">Variant with adversarial cases:</h3>
+<p>Unhappy cases, where the assistant might not able to fulfill the request at once, or might give up or might fail nicely, recover from failure etc.</p>
+<h3 id="variant-with-noisy-user-prompt">Variant with noisy user prompt:</h3>
+<p>Users sometimes might ask same thing but with different wording and/or with a noisy data</p>
 <ul>
-<li>It's recomended for the model to ask not all at once, but instead, one by one or two at a turn.</li>
-</ul>
-<h2 id="2-unhappy-user-cases">2. Unhappy user cases</h2>
-<p>Just because there might happen some possible issues i.e. function throws an error, users might get unhappy</p>
-<h2 id="3-user-cancels-request">3. User cancels request</h2>
-<ul>
-<li>Sometimes users might change their mind and want to cancel their request</li>
-</ul>
-<h2 id="4-user-changes-params">4. User changes params</h2>
-<ul>
-<li>Sometimes users might change their mind and want to change the parameters e.g. not on Monday but on Wednesday</li>
-</ul>
-<h2 id="5-user-asks-params">5. User asks params</h2>
-<ul>
-<li>User might ask function parameters, in order to provide all at once.</li>
-</ul>
-<h2 id="6-user-rejects-providing-params">6. User rejects providing params</h2>
-<ul>
-<li>User might not want to provide some params, they might think they are confidential. e.g. phone number, passwords etc.</li>
-</ul>
-<h2 id="7-recover-from-failure">7. Recover from failure</h2>
-<ul>
-<li>To be able to recover from failure cases;<ul>
-<li>It's recommended to have detailed output with specific error messages</li>
-<li>It's recommended to cover all possible cases within system prompt</li>
-</ul>
-</li>
-</ul>
-<h2 id="8-system-pivoting">8. System pivoting</h2>
-<ul>
-<li>System should prevail always over users, in any circumstances, if the user tries to overwrite the system behaviour by prompt; it shouldn't be allowed by the model.</li>
+<li>Some users might be toxic</li>
+<li>Some users might use slang</li>
+<li>Some developers might include user prompt in JSON/HTML format</li>
+<li>Some users might be verbose</li>
+<li>Some users might use some shortcuts e.g. <em>"properties.color = red"</em>, instead of saying <em>"give me red products"</em></li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../best-practices-for-training-data/" class="btn btn-neutral float-left" title="Best Practices for Training Data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../recommendations-for-improvement/" class="btn btn-neutral float-right" title="Recommendations for Improvement">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../recommendations-for-improvement/" class="btn btn-neutral float-left" title="Recommendations for Improvement"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../best-practices/" class="btn btn-neutral float-right" title="Best Practices">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -206,10 +178,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../best-practices-for-training-data/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../recommendations-for-improvement/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../recommendations-for-improvement/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../best-practices/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

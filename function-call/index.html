@@ -62,7 +62,39 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../function-pivoting-aka-tool-search/">Function Pivoting aka Tool Search</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../best-practices-for-schema/">Best Practices for Schema</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../best-practices-for-system-instruction/">Best Practices for System Instruction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../best-practices-for-tool-output/">Best Practices for Output</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../best-practices-for-training-data/">Best Practices for Training Data</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../adversarial-user-cases/">Adversarial User Cases</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../recommendations-for-improvement/">Recommendations for Improvement</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../variants/">Variants</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../best-practices/">Best Practices</a>
                 </li>
               </ul>
               <ul>
@@ -95,21 +127,21 @@
                 <h1 id="function-call">Function Call</h1>
 <p>A function call is a suggestion call by the model to the system using the LLM by an API to be performed.</p>
 <h2 id="1-single-function-call">1. Single Function Call</h2>
-<p>In a single function call; the user prompts such a query that requires exactly one function call to be performed.</p>
+<p>In a single function call; the user prompts such a query that requires exactly one function to be called.</p>
 <blockquote>
 <blockquote>
 <p><em>"What is the weather like in Tokyo?"</em></p>
 </blockquote>
 </blockquote>
 <h2 id="2-multiple-parallel-function-calls">2. Multiple Parallel Function Calls</h2>
-<p>In a multiple parallel function calls; the user prompts such a query that requires more than one function call to be performed.</p>
+<p>In a multiple parallel function calls; the user prompts such a query that requires more than one function to e called.</p>
 <blockquote>
 <blockquote>
 <p><em>"What is the weather like in Tokyo and Paris?"</em></p>
 </blockquote>
 </blockquote>
 <h2 id="3-multiple-consecutive-function-calls">3. Multiple Consecutive Function Calls</h2>
-<p>In a multiple consecutive function calls; the user prompts such a query that requires consecutive function calls to be performed, because the second function call would depend on the first one's return value.</p>
+<p>In a multiple consecutive function calls; the user prompts such a query that requires consecutive functions to be called; because the second function call would depend on the first one's output.</p>
 <blockquote>
 <blockquote>
 <p><em>"Create an appointment for XYZ on day A or B."</em></p>
@@ -119,7 +151,7 @@
 </blockquote>
 </blockquote>
 <h2 id="4-no-function-call">4. No Function Call</h2>
-<p>In a no function call; the user prompts such a query that does not require a function call to be performed. The reason might be either because of a not supported actions, or a query that does not require a function call at all.</p>
+<p>In a no function call; the user prompts such a query that does not require a function to be called. The reason might be either because of a unsupported actions, or a query that might not require a function call at all.</p>
 <blockquote>
 <blockquote>
 <p><em>"What are the signs of the rain?"</em></p>
@@ -130,7 +162,7 @@
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../turn/" class="btn btn-neutral float-left" title="Turn"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../adversarial-user-cases/" class="btn btn-neutral float-right" title="Adversarial User Cases">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../function-pivoting-aka-tool-search/" class="btn btn-neutral float-right" title="Function Pivoting aka Tool Search">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -156,7 +188,7 @@
       <span><a href="../turn/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../adversarial-user-cases/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../function-pivoting-aka-tool-search/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
