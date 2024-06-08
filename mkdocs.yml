@@ -3,7 +3,15 @@ nav:
   - Home: index.md
   - Turn: turn.md
   - Function Call: function-call.md
+  - Function Pivoting aka Tool Search: function-pivoting-aka-tool-search.md
+  - Best Practices for Schema: best-practices-for-schema.md
+  - Best Practices for System Instruction: best-practices-for-system-instruction.md
+  - Best Practices for Output: best-practices-for-tool-output.md
+  - Best Practices for Training Data: best-practices-for-training-data.md
   - Adversarial User Cases: adversarial-user-cases.md
+  - Recommendations for Improvement: recommendations-for-improvement.md
+  - Variants: variants.md
+  - Best Practices: best-practices.md
   - About: about.md
 
 theme: readthedocs
