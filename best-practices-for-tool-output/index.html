@@ -66,7 +66,9 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Best Practices for Output</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-enhanced-definitions-and-details">1. Enhanced Definitions and Details</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-outputs">1. Outputs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-error-messages">2. Error messages</a>
     </li>
     </ul>
                 </li>
@@ -119,9 +121,51 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="best-practices-for-tool-output">Best practices for tool output</h1>
-<h2 id="1-enhanced-definitions-and-details">1. Enhanced Definitions and Details</h2>
+<h2 id="1-outputs">1. Outputs</h2>
+<p>The outputs should not contain a human written like sentences. Becuase this is an API function response, it's more expected to have it more concise, straightforward, key-value paired, <code>number</code>/<code>enum</code> oriented.</p>
 <ul>
-<li>Error messages or feedback should provide specific corrective actions rather than just highlighting issues.</li>
+<li>
+<p>Thus an output like this is not good:
+    <code>json
+    {
+        "message": "The item with ID 342 is updated successfully."
+    }</code></p>
+</li>
+<li>
+<p>Instead, the below is better:</p>
+<p><code>json
+{
+    "status": "OK",
+    "success": true,
+    "action": "update",
+    "data": {
+        "item_id": 342
+    }
+}</code></p>
+</li>
+</ul>
+<h2 id="2-error-messages">2. Error messages</h2>
+<p>In case there's an error, the error messages should be descriptive and possibly it might contain a statement how to recover from failure.</p>
+<p>Error messages or feedback should provide specific corrective actions rather than just highlighting issues.</p>
+<ul>
+<li>
+<p>The below error message is not corrective:</p>
+<p><code>json
+{
+    "status": 500,
+    "message": "Internal server error"
+}</code></p>
+</li>
+<li>
+<p>Instead below is a better and corrective error message:</p>
+<p><code>json
+{
+    "status": "500",
+    "message": "Internal server error",
+    "error": "Item ID is None!"
+}</code></p>
+<p>Here the model can understand that the reason is to have Item ID to be None, and so it knows how to resolve it.</p>
+</li>
 </ul>
               
             </div>

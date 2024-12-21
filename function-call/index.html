@@ -50,13 +50,13 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Function Call</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-single-function-call">1. Single Function Call</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-single-function-call">1. Single function call</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-multiple-parallel-function-calls">2. Multiple Parallel Function Calls</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2-multiple-parallel-function-calls">2. Multiple parallel function calls</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-multiple-consecutive-function-calls">3. Multiple Consecutive Function Calls</a>
+    <li class="toctree-l2"><a class="reference internal" href="#3-multiple-consecutive-function-calls">3. Multiple consecutive function calls</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-no-function-call">4. No Function Call</a>
+    <li class="toctree-l2"><a class="reference internal" href="#4-no-function-call">4. No function call</a>
     </li>
     </ul>
                 </li>
@@ -126,36 +126,28 @@
               
                 <h1 id="function-call">Function Call</h1>
 <p>A function call is a suggestion call by the model to the system using the LLM by an API to be performed.</p>
-<h2 id="1-single-function-call">1. Single Function Call</h2>
+<h2 id="1-single-function-call">1. Single function call</h2>
 <p>In a single function call; the user prompts such a query that requires exactly one function to be called.</p>
-<blockquote>
 <blockquote>
 <p><em>"What is the weather like in Tokyo?"</em></p>
 </blockquote>
-</blockquote>
-<h2 id="2-multiple-parallel-function-calls">2. Multiple Parallel Function Calls</h2>
+<h2 id="2-multiple-parallel-function-calls">2. Multiple parallel function calls</h2>
 <p>In a multiple parallel function calls; the user prompts such a query that requires more than one function to e called.</p>
-<blockquote>
 <blockquote>
 <p><em>"What is the weather like in Tokyo and Paris?"</em></p>
 </blockquote>
-</blockquote>
-<h2 id="3-multiple-consecutive-function-calls">3. Multiple Consecutive Function Calls</h2>
+<h2 id="3-multiple-consecutive-function-calls">3. Multiple consecutive function calls</h2>
 <p>In a multiple consecutive function calls; the user prompts such a query that requires consecutive functions to be called; because the second function call would depend on the first one's output.</p>
-<blockquote>
 <blockquote>
 <p><em>"Create an appointment for XYZ on day A or B."</em></p>
 <blockquote>
 <p>(First we need to check the availability of XYZ on day A and B to do so.)</p>
 </blockquote>
 </blockquote>
-</blockquote>
-<h2 id="4-no-function-call">4. No Function Call</h2>
+<h2 id="4-no-function-call">4. No function call</h2>
 <p>In a no function call; the user prompts such a query that does not require a function to be called. The reason might be either because of a unsupported actions, or a query that might not require a function call at all.</p>
 <blockquote>
-<blockquote>
 <p><em>"What are the signs of the rain?"</em></p>
-</blockquote>
 </blockquote>
               
             </div>

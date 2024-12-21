@@ -129,12 +129,16 @@
 <p>JSON Schema pivoting is a way that there is a one Tool Search function which will search withing the tools and output the most relevant one so that the model can use that outputted function in next call.</p>
 <h3 id="benefit">Benefit:</h3>
 <ul>
-<li>Picking the right function will be under control</li>
-<li>When there are too many functions; it will save a huge amount of token count.</li>
+<li>
+<p>Picking the right function will be under your control instead of LLMs.</p>
+</li>
+<li>
+<p>When there are too many functions; becuase you don't need to send them all, it will save a significant amount of tokens which will reduce the cost.</p>
+</li>
 </ul>
 <h3 id="drawback">Drawback:</h3>
 <ul>
-<li>This will cause 2 function calls in each case, so there will always be a delay.</li>
+<li>It causes at least 2 function calls in each case, so there will always be a delay. Moreover, it might not be that right to leave the decision of the functions to your app. LLMs are obviously better to choose the correct function with correct parameters. Lastly, many LLMs are not trained in that way, this would be just an experiment.</li>
 </ul>
               
             </div>

@@ -86,7 +86,7 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#variant-with-system-instructions">Variant with system instructions:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#variant-with-persona">Variant with persona:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#variant-with-user-persona">Variant with user persona:</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#variant-with-json-schema">Variant with json schema:</a>
     </li>
@@ -134,11 +134,21 @@
 <p>From an original task, 4-5 variants might be created.</p>
 <h2 id="to-create-variants">To create variants:</h2>
 <h3 id="variant-with-system-instructions">Variant with system instructions:</h3>
-<p>Update the system instructions to include different kind of behavior e.g. assistant should be concise, assistant should be kind etc</p>
-<h3 id="variant-with-persona">Variant with persona:</h3>
-<p>Users might have different personas e.g. user might not provide all the informations or they might provide all at once</p>
+<p>Slightly change the system prompt with a variant scenario.</p>
+<ul>
+<li>Behavioral: Include different kind of behavior e.g. assistant should be concise, assistant should be kind etc</li>
+<li>Data related: Change a data value such as date, name, email, phone etc.</li>
+</ul>
+<h3 id="variant-with-user-persona">Variant with user persona:</h3>
+<p>Use exactly same schema and system prompt but change the user behavior.</p>
+<ul>
+<li>Users might have different personas e.g. user might not provide all the informations or they might provide all at once</li>
+</ul>
 <h3 id="variant-with-json-schema">Variant with json schema:</h3>
-<p>Update json schema with competing or mixed functions (Say if original includes 3 functions, this might include 5-6 functions)</p>
+<p>Slightly change the JSON schema while keepin the res as same.</p>
+<ul>
+<li>Update json schema with competing or mixed functions (Say if original includes 3 functions, this might include 5-6 functions)</li>
+</ul>
 <h3 id="variant-with-adversarial-cases">Variant with adversarial cases:</h3>
 <p>Unhappy cases, where the assistant might not able to fulfill the request at once, or might give up or might fail nicely, recover from failure etc.</p>
 <h3 id="variant-with-noisy-user-prompt">Variant with noisy user prompt:</h3>

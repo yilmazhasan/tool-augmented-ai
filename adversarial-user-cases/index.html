@@ -74,7 +74,7 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Adversarial User Cases</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-missing-information">1. Missing Information</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-missing-information">1. Missing information</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#2-unhappy-user-cases">2. Unhappy user cases</a>
     </li>
@@ -89,6 +89,10 @@
     <li class="toctree-l2"><a class="reference internal" href="#7-recover-from-failure">7. Recover from failure</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#8-system-pivoting">8. System pivoting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-toxic-user">9. Toxic user</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10-noisy-input">10. Noisy input</a>
     </li>
     </ul>
                 </li>
@@ -134,22 +138,24 @@
               
                 <h1 id="adversarial-user-cases">Adversarial User Cases</h1>
 <p>Not always; the users are happy, the convesations straightforward and perfect, and the functions succeed.</p>
-<h2 id="1-missing-information">1. Missing Information</h2>
+<h2 id="1-missing-information">1. Missing information</h2>
+<p>The user does not provide all parameters in advance to call a function.</p>
 <p>Not always, users provide all the informations at once, there might be some missing and some extra informations. This is basically because of that they don't know what the params are.</p>
 <p>The model might need to ask one by one for the required values.</p>
-<blockquote>
 <blockquote>
 <p><em>I want to have an appointment on day A or day B</em></p>
 <blockquote>
 <p>(<em>The model needs to know for which department, and for which doctor.</em>)</p>
 </blockquote>
 </blockquote>
-</blockquote>
 <ul>
 <li>It's recomended for the model to ask not all at once, but instead, one by one or two at a turn.</li>
 </ul>
 <h2 id="2-unhappy-user-cases">2. Unhappy user cases</h2>
-<p>Just because there might happen some possible issues i.e. function throws an error, users might get unhappy</p>
+<ul>
+<li>Just because there might happen some possible issues i.e. function throws an error, users might get unhappy</li>
+<li>The user might be unhappy becuase the model can't understand what they try to do.</li>
+</ul>
 <h2 id="3-user-cancels-request">3. User cancels request</h2>
 <ul>
 <li>Sometimes users might change their mind and want to cancel their request</li>
@@ -176,7 +182,16 @@
 </ul>
 <h2 id="8-system-pivoting">8. System pivoting</h2>
 <ul>
+<li>Where the system prompt should decide in ambiguous cases.</li>
 <li>System should prevail always over users, in any circumstances, if the user tries to overwrite the system behaviour by prompt; it shouldn't be allowed by the model.</li>
+</ul>
+<h2 id="9-toxic-user">9. Toxic user</h2>
+<ul>
+<li>The user might use a toxic/slang language.</li>
+</ul>
+<h2 id="10-noisy-input">10. Noisy input</h2>
+<ul>
+<li>The user might have copied and pasted a noisy data where the arguments have to be extracted to call a function.</li>
 </ul>
               
             </div>
