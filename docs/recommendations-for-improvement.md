@@ -1,9 +1,9 @@
 # Recommendations for Improvement
 
-## Parameter Documentation:
+## Parameter documentation:
 
-Enhance function signatures with explicit parameter documentation, including the type, purpose, and any default values. Tools like Javadoc for Java or docstrings in Python can be utilized for this purpose.
+Enhance function signatures with explicit parameter documentation, including the type, purpose, and any default values.
   
-## Error Handling:
+## Error handling:
 
-Implement robust error handling to manage cases where input parameters do not meet expected formats or values. For example, if a `max_length` parameter is expected to be an integer, the function should handle cases where a string or floating number might be erroneously passed.
+- In order to LLM to handle an error occurred after a bad call, it's a good practice to include how to handle certain type of errors in descriptions of either functions or parameters.

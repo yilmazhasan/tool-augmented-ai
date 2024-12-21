@@ -1,7 +1,7 @@
 # Tool Augmented AI
 
-## By Reego Software
+## Built by Reego Software
 
-Reego is an Information Technology individual company, mainly workng on the contract based projects.
+Reego is an Information Technology individual company built in 2021, mainly working based on B2B contract.
 
 [Reego Software](https://reego.software)

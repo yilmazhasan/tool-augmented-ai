@@ -6,15 +6,22 @@ From an original task, 4-5 variants might be created.
 
 ### Variant with system instructions:
 
-Update the system instructions to include different kind of behavior e.g. assistant should be concise, assistant should be kind etc
+Slightly change the system prompt with a variant scenario.
 
-### Variant with persona:
+- Behavioral: Include different kind of behavior e.g. assistant should be concise, assistant should be kind etc
+- Data related: Change a data value such as date, name, email, phone etc.
 
-Users might have different personas e.g. user might not provide all the informations or they might provide all at once
+### Variant with user persona:
+
+Use exactly same schema and system prompt but change the user behavior.
+
+- Users might have different personas e.g. user might not provide all the informations or they might provide all at once
 
 ### Variant with json schema:
 
-Update json schema with competing or mixed functions (Say if original includes 3 functions, this might include 5-6 functions)
+Slightly change the JSON schema while keepin the res as same.
+
+- Update json schema with competing or mixed functions (Say if original includes 3 functions, this might include 5-6 functions)
 
 ### Variant with adversarial cases:
 
